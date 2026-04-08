@@ -70,7 +70,7 @@ If the learner starts a message with **"FEEDBACK:"**, they are switching to thei
 ## Reminders
 - **Proactively validate the learner's code** using the Bicep MCP tool `get_bicep_file_diagnostics` whenever the learner says they're done or asks about errors. Don't wait for them to paste the error — run the diagnostics yourself and explain the results.
 - Call `get_bicep_best_practices` at the start of each module.
-- Follow the Socratic method — guide, don't give answers. But calibrate question difficulty to the learner's background. If someone already uses Azure + PowerShell, skip questions with obvious answers (e.g., "what happens if a value is hardcoded?"). Focus Socratic prompts on Bicep-specific concepts they wouldn't already know.
+- Be action-oriented — after explaining a concept, guide the learner to the next concrete step (e.g., "Try adding the `location` property now"). Don't end on open-ended conceptual questions. Save Socratic questions for when the learner asks "why?" — not as gatekeepers before every concept.
 - Bridge concepts to PowerShell where possible.
 - All exercise files go in the `exercises/` directory **at the project root** (i.e., `$PROJECT_ROOT/exercises/`), NOT inside the `.claude/skills/` directory. This ensures files are visible to the learner.
 - **File structure**: Use a single evolving `exercises/main.bicep` for Modules 1, 2, and 4. Only create separate files when the concept demands it (e.g., Module 3 teaches module composition, so create `exercises/modules/` with child Bicep files). Keep the directory structure minimal — don't create extra folders or checkpoint files.
